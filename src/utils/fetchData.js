@@ -9,11 +9,13 @@ const fetchData = (url_api) => {
 
             (xhttp.status === 200)
              ? resolve(JSON.parse(xhttp.responseText))
-             : reject(new Error('Error ' + url_api))
+             : reject(new Error('Error ', url_api))
 }
 })
     xhttp.send()
 })
+}
+
 
 module.exports = fetchData
     
@@ -28,4 +30,3 @@ module.exports = fetchData
     
     
     
-}
